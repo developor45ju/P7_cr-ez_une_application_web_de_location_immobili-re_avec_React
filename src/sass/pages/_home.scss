@@ -1,0 +1,19 @@
+.gallery-cards {
+    background-color: #FFFFFF;
+
+    .wrap-card {
+        width: fit-content;
+        margin: auto;
+        max-width: 1420px;
+        background-color: rgb(240, 240, 240);
+        border-radius: 15px;
+        padding: 50px;
+        margin-bottom: 35px;
+    
+        h3 {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    }
+}

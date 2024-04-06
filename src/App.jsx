@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import Home from '../pages/Home.jsx';
-import Accommodation from '../pages/Accommodation.jsx';
-import About from '../pages/About.jsx'
-import NotFoundPage from '../pages/NotFoundPage.jsx';
+import Home from './pages/Home/';
+import Accommodation from './pages/Accommodation/';
+import About from './pages/About/'
+import NotFoundPage from './pages/404/';
 
 const App = () => {
     return (
