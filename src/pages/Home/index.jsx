@@ -1,16 +1,15 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
-    const [datas, setData] = useState(null);
-    const [load, setLoad] = useState(false);
+    const [accommodations, setAccommodations] = useState(null);
     useEffect(() => {
-        const fetchActicles = async () => {
+        const fetchArticles = async () => {
             const res = await fetch('http://localhost:3000/datas/accommodations.json');
-            const data = await res.json();
-            setData(data);
-            setLoad(true);
+            const accommodationsFromApi = await res.json();
+            setAccommodations(accommodationsFromApi);
         }
-        fetchActicles();
+        fetchArticles();
      }, [])
 
      return (
@@ -23,15 +22,15 @@ function Home() {
             </div>
             <section className="gallery-cards">
                 <div className="wrap-card">
-                    {load && datas.map(card => {
+                    {accommodations && accommodations.map(card => {
                         return (
-                        <article className="card" key={card.id}>
-                            <img src={card.cover} alt="Logement" />
-                            <h3>{card.title}</h3>
-                        </article>
-                        )
-                    }
-                    )}
+                        <Link to={`/accomodation/${card.id}`} key={card.id}>
+                            <article className="card">
+                                <img src={card.cover} alt="Logement" />
+                                <h3>{card.title}</h3>
+                            </article>
+                         </Link>
+                    )})}
                 </div>
             </section>
         </main>

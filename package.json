@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/style.scss ./public/css/style.css --style=compressed",
-    "prefixer": "postcss ./public/css/style.css --use autoprefixer -d --watch ./public/css"
+    "prefixer": "postcss ./public/css/style.css --use autoprefixer -d ./public/css"
   },
   "eslintConfig": {
     "extends": [
