@@ -1,0 +1,49 @@
+.gallery {
+    background-color: $secondary;
+    margin-top: 40px;
+    margin-bottom: 35px;
+
+    .wrap-gallery {
+        position: relative;
+        width: 1250px;
+        margin: auto;
+        object-fit: cover;
+        height: 415px;
+        border-radius: 15px;
+        text-align: center;
+        color: $primary;
+
+        #arrowLeft, #arrowRight {
+            position: absolute;
+            display: inline-block;
+            height: 5em;
+            width: 5em;
+        }
+
+        #arrowLeft {
+            top: 50%;
+            transform: translateY(-50%);
+            left: 2em;
+        }
+
+        #arrowRight {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 2em;
+        }
+
+        .gallery__slide--active {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            border-radius: inherit;
+
+            img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+    }
+}

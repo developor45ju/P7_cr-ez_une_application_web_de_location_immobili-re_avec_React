@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Home() {
-    const [accommodations, setAccommodations] = useState(null);
+    const [accommodations, setAccommodations] = useState([]);
     useEffect(() => {
         const fetchArticles = async () => {
             const res = await fetch('http://localhost:3000/datas/accommodations.json');
@@ -24,7 +24,7 @@ function Home() {
                 <div className="wrap-card">
                     {accommodations && accommodations.map(card => {
                         return (
-                        <Link to={`/accomodation/${card.id}`} key={card.id}>
+                        <Link to={`/accommodation/${card.id}`} key={card.id}>
                             <article className="card">
                                 <img src={card.cover} alt="Logement" />
                                 <h3>{card.title}</h3>
