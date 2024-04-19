@@ -1,0 +1,32 @@
+footer {
+    background-color: $ternary;
+    color: $primary;
+
+    .footer__wrap {
+        position: relative;
+        max-width: 1240px;
+        margin: auto;
+        height: 12vh;
+
+        h3 {
+            position: absolute;
+            width: 120px;
+            margin: auto;
+            top: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            img {
+                width: inherit;
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        p {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%); 
+            font-size: 24px;
+            bottom: 40px;
+        }
+    }
+}
