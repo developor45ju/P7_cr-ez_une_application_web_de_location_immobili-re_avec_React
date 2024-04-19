@@ -30,6 +30,7 @@ function Gallery({ galleryImages }) {
             </div>
             <FontAwesomeIcon icon={faAngleLeft} onClick={prevSlide} id="arrowLeft" />
             <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide} id="arrowRight" />
+            <span className="number-image-current">{current + 1}/{galleryImages.length}</span>
         </div>
     )
 }

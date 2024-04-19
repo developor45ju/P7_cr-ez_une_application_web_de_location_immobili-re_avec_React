@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from "react-router-dom";
 import Gallery from '../../components/Gallery';
+import Tag from '../../components/Tags';
+
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -31,6 +33,7 @@ function Accommodation() {
                     </div>
                     <article className="accommodation">
                         <h1>{currentAccommodation.title}</h1>
+                        <Tag tags={currentAccommodation.tags} />
                     </article>
                 </>
             )}
