@@ -1,0 +1,41 @@
+#page-not-found {
+    background-color: $primary;
+
+    &__wrap {
+        position: relative;
+        max-width: 1240px;
+        margin: auto;
+        height: 80vh;
+
+        h2 {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            transform: translateX(-50%);
+            width: fit-content;
+            margin: auto;
+            color: $secondary;
+            font-weight: bold;
+            font-size: 100px;
+        }
+
+        p {
+            position: absolute;
+            left: 50%;
+            top: 425px;
+            color: $secondary;
+            font-size: 36px;
+            width: max-content;
+            transform: translateX(-50%);
+        }
+
+        a {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: $secondary;
+            font-size: 24px;
+        }
+    }
+}
