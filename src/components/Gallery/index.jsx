@@ -4,24 +4,33 @@ import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Gallery({ galleryImages }) {
     const [current, setCurrent] = useState(0);
-    const lengthGallery = galleryImages.length;
-    const nextSlide = () =>  setCurrent(current === lengthGallery -1 ? 0 : current + 1);
-    const prevSlide = () => setCurrent(current === 0 ? lengthGallery - 1 : current - 1);
+    
+    const slideWidth = () => {
+        const imgWidth = document.getElementsByClassName('gallery__slide')[0];
+        if (!imgWidth) {
+            return 0;
+        }
+        return imgWidth.width;
+    }
+    
+    const nextSlide = () => {
+      setCurrent(nextCurrent => nextCurrent === galleryImages.length - 1 ? 0 : nextCurrent + 1);
+    }
+    
+    const prevSlide = () => {
+      setCurrent(prevCurrent => prevCurrent === 0 ? galleryImages.length - 1 : prevCurrent - 1);
+    }
 
     return (
-        <>
-            {lengthGallery > 1 && (
-                <FontAwesomeIcon icon={faAngleLeft} onClick={prevSlide} id="arrowLeft" />
-            )}
-            {lengthGallery > 1 && (
-                <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide} id="arrowRight" />
-            )}    
-            {galleryImages.map((slide, index) => (
-                <div key={index} className={current === index ? 'gallery__slide--active' : 'gallery__slide'}>
-                    {index === current && <img src={slide} alt="logement" />}
-                </div>
-            ))}
-        </>
+        <div className="gallery__wrap">
+            <div className="gallery__container" style={{"transform": `translateX(-${current * slideWidth()}px)`}}>
+                {galleryImages.map((slide, index) => (
+                    <img src={slide} alt="logement" key={index} className={`gallery__slide ${index === current ? 'active' : ''}`}  />
+                ))}
+            </div>
+            <FontAwesomeIcon icon={faAngleLeft} onClick={prevSlide} id="arrowLeft" />
+            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide} id="arrowRight" />
+        </div>
     )
 }
 

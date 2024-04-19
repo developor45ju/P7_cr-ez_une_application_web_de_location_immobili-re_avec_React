@@ -27,9 +27,7 @@ function Accommodation() {
             {currentAccommodation && (
                 <>
                     <div className="gallery">
-                        <div className='wrap-gallery'>
-                            <Gallery galleryImages={currentAccommodation.pictures} />
-                        </div>
+                        <Gallery galleryImages={currentAccommodation.pictures} />
                     </div>
                     <article className="accommodation">
                         <h1>{currentAccommodation.title}</h1>
