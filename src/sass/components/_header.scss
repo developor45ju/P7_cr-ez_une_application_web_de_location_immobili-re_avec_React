@@ -1,0 +1,27 @@
+header {
+    background-color: $primary;
+
+    .header__wrap {
+        margin: auto;
+        height: 10vh;
+        width: 1240px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        nav ul {
+            display: flex;
+
+            li a {
+                text-decoration: none;
+                font-size: 24px;
+                margin: 0 25px;
+                color: $secondary;
+            }
+
+            li a.active {
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+}
