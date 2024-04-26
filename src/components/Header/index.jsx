@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 function Header({nav, logo}) {
+    const handleActiveState = ({ isActive }) => isActive ? "active" : "";
     return (
         <header>
             <div className="header__wrap">
@@ -9,9 +10,11 @@ function Header({nav, logo}) {
                 <nav>
                     <ul>
                         {nav.map((item, index) => (
-                            <li key={index}><NavLink to={item.path}className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "active" : ""
-                          }>{item.name}</NavLink></li>
+                            <li key={index}>
+                                <NavLink 
+                                to={item.path}
+                                className={handleActiveState}>{item.name}</NavLink>
+                          </li>
                         ))}
                     </ul>
                 </nav>
