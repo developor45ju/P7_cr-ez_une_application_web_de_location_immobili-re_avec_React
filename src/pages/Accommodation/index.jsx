@@ -34,8 +34,16 @@ function Accommodation() {
           </div>
           <article className="accommodation">
             <h1>{currentAccommodation.title}</h1>
+            <p>{currentAccommodation.location}</p>
             <Tag tags={currentAccommodation.tags} />
-            <Rating rate={Number(currentAccommodation.rating)} />
+            <div className="accommodation__host">
+              <p>{currentAccommodation.host.name}</p>
+              <img
+                src={currentAccommodation.host.picture}
+                alt={currentAccommodation.host.name}
+              />
+            </div>
+            <Rating rate={currentAccommodation.rating} />
           </article>
         </>
       )}
