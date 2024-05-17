@@ -1,0 +1,20 @@
+.accommodation__host {
+    display: flex;
+    justify-content: flex-end;
+
+    .full-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+.tag__container {
+    display: flex;
+}
+
+.rating {
+    display: flex;
+    justify-content: flex-end;
+}

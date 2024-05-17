@@ -13,7 +13,7 @@ function Rating({ rate }) {
   if (isRateValid && isRateANumber) {
     const rateToUse = Number(rate);
     return (
-      <div>
+      <div className="rating">
         {[...Array(rateToUse)].map(() => (
           <FontAwesomeIcon icon={faStar} style={{ color: "#FF6060" }} />
         ))}

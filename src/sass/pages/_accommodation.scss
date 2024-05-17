@@ -1,0 +1,55 @@
+.accommodation__wrap {
+    max-width: 1240px;
+    margin: auto;
+
+    h1 {
+        font-weight: 500;   
+        font-size: 38px;
+        color: $secondary;
+    }
+
+    .accommodation__about {
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 10px;
+            color: $secondary;
+        }
+
+    }
+    .tag__container {
+        gap: 20px;
+        margin: 20px 0;
+
+        &-card {
+            font-size: 14px;
+            font-weight: 500;
+            padding: 5px 15px;
+            background-color: $secondary;
+            border-radius: 10px;
+            color: $primary;
+        }
+    }
+
+    .rating {
+        gap: 10px;
+        font-size: 24px;
+    }
+
+    .accommodation__host {
+        height: fit-content;
+        gap: 20px;
+        .full-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: $secondary;
+            gap: 6px;
+        }
+        img {
+            height: 64px;
+            width: 64px;
+            border-radius: 100%;
+            object-fit: cover;
+        }
+    }
+}

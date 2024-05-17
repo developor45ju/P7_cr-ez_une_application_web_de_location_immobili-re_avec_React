@@ -25,6 +25,9 @@ function Accommodation() {
     (accommodation) => accommodation.id === id
   );
 
+  const fname = currentAccommodation?.host.name.split(" ")[0];
+  const lname = currentAccommodation?.host.name.split(" ")[1];
+
   return (
     <main>
       {currentAccommodation && (
@@ -33,17 +36,25 @@ function Accommodation() {
             <Gallery galleryImages={currentAccommodation.pictures} />
           </div>
           <article className="accommodation">
+          <div className="accommodation__wrap">
+            <div className="accommodation__about">
             <h1>{currentAccommodation.title}</h1>
-            <p>{currentAccommodation.location}</p>
-            <Tag tags={currentAccommodation.tags} />
+              <p>{currentAccommodation.location}</p>
+
+            </div>
+              <Tag tags={currentAccommodation.tags} />
             <div className="accommodation__host">
-              <p>{currentAccommodation.host.name}</p>
+              <div className="full-name">
+                <p>{fname}</p>
+                <p>{lname}</p>
+              </div>
               <img
                 src={currentAccommodation.host.picture}
                 alt={currentAccommodation.host.name}
               />
             </div>
             <Rating rate={currentAccommodation.rating} />
+          </div>
           </article>
         </>
       )}
