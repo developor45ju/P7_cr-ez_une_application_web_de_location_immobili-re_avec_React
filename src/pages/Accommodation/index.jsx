@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Gallery from "../../components/Gallery";
 import Rating from "../../components/Rating";
 import Tag from "../../components/Tags";
+import Collapse from "../../components/Collapse";
 
 function Accommodation() {
   const { id } = useParams();
@@ -18,8 +19,6 @@ function Accommodation() {
     };
     fetchArticle();
   }, []);
-  //  const nbStars = 5;
-  //  const nbStarsActif = accommodation.rating;
 
   const currentAccommodation = accommodation.find(
     (accommodation) => accommodation.id === id
@@ -36,25 +35,39 @@ function Accommodation() {
             <Gallery galleryImages={currentAccommodation.pictures} />
           </div>
           <article className="accommodation">
-          <div className="accommodation__wrap">
-            <div className="accommodation__about">
-            <h1>{currentAccommodation.title}</h1>
-              <p>{currentAccommodation.location}</p>
-
-            </div>
-              <Tag tags={currentAccommodation.tags} />
-            <div className="accommodation__host">
-              <div className="full-name">
-                <p>{fname}</p>
-                <p>{lname}</p>
+            <div className="accommodation__wrap">
+              <div className="accommodation__about">
+                <h1>{currentAccommodation.title}</h1>
+                <p>{currentAccommodation.location}</p>
               </div>
-              <img
-                src={currentAccommodation.host.picture}
-                alt={currentAccommodation.host.name}
-              />
+              <Tag tags={currentAccommodation.tags} />
+              <div className="accommodation__host">
+                <div className="full-name">
+                  <p>{fname}</p>
+                  <p>{lname}</p>
+                </div>
+                <img
+                  src={currentAccommodation.host.picture}
+                  alt={currentAccommodation.host.name}
+                />
+              </div>
+              <Rating rate={currentAccommodation.rating} />
             </div>
-            <Rating rate={currentAccommodation.rating} />
-          </div>
+
+            <div className="collapse">
+              <div className="collapse__wrap">
+                <Collapse title="Description">
+                  <p>{currentAccommodation.description}</p>
+                </Collapse>
+                <Collapse title="Équipements">
+                  <ul>
+                    {currentAccommodation.equipments.map((items, index) => (
+                      <li key={index}>{items}</li>
+                    ))}
+                  </ul>
+                </Collapse>
+              </div>
+            </div>
           </article>
         </>
       )}

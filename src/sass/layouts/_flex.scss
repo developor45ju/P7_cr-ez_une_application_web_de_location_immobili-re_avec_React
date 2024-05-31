@@ -18,3 +18,21 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.collapse__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .collapse__item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.wrap-about .collapse__item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
