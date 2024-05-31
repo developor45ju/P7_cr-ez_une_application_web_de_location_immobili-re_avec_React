@@ -2,7 +2,7 @@ import Collapse from "../../components/Collapse";
 
 function About() {
     return ( 
-        <>
+        <main>
             <div className="thumbail">
                 <div className="wrap-thumbail">
                     <img src="./images/thumbailA.jpg" alt="Vignette montagne" />
@@ -43,7 +43,7 @@ function About() {
                     })}
                 </div>
             </section>
-        </>
+        </main>
     )
 }
 

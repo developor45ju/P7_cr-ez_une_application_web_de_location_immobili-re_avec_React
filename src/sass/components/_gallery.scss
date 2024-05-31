@@ -1,6 +1,6 @@
 .gallery {
     background-color: $primary;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 35px;
     height: 410px;
 
@@ -36,6 +36,7 @@
         width: 5em;
         z-index: 100000000000;
         color: $primary;
+        cursor: pointer;
     }
 
     #arrowLeft {
