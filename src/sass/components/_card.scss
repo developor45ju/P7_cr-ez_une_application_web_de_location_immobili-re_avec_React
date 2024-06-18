@@ -28,3 +28,11 @@
         border-radius: inherit;
     }
 }
+
+@media screen and (max-width: 426px){
+    .card {
+        height: 300px;
+        width: 100%;
+        border-radius: 10px; 
+    }    
+}

@@ -14,9 +14,9 @@ function Home() {
 
      return (
         <main>
-            <div className="thumbail">
-                <div className="wrap-thumbail">
-                    <img src="./images/thumbailH.jpg" alt="Vignette côte mer" />
+            <div className="thumbnail">
+                <div className="wrap-thumbnail">
+                    <img src="./images/thumbnailH.jpg" alt="Vignette côte mer" />
                     <h2>Chez vous, partout et ailleurs</h2>
                 </div>
             </div>

@@ -3,15 +3,14 @@ import Collapse from "../../components/Collapse";
 function About() {
     return ( 
         <main>
-            <div className="thumbail">
-                <div className="wrap-thumbail">
-                    <img src="./images/thumbailA.jpg" alt="Vignette montagne" />
+            <div className="thumbnail">
+                <div className="wrap-thumbnail">
+                    <img src="./images/thumbnailA.jpg" alt="Vignette montagne" />
                 </div>
             </div>
             <section className="about">
                 <div className="wrap-about">
-                    {[...Array(4)].map((items ,i) => {
-                        console.log(i);
+                    {[...Array(4)].map((_ ,i) => {
                         switch (i) {
                             case 0:
                                 return (

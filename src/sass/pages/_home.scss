@@ -18,3 +18,19 @@
         }
     }
 }
+
+@media screen and (max-width: 426px){
+    .gallery-cards {
+        .wrap-card {
+            width: 95%;
+            padding: 0;
+            margin: 0;
+            gap: 15px;
+            background-color: $primary;
+
+            a {
+                width: 100%;
+            }
+        }
+    }   
+}

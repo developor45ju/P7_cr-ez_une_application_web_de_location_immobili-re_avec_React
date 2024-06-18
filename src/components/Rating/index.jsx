@@ -14,11 +14,11 @@ function Rating({ rate }) {
     const rateToUse = Number(rate);
     return (
       <div className="rating">
-        {[...Array(rateToUse)].map(() => (
-          <FontAwesomeIcon icon={faStar} style={{ color: "#FF6060" }} />
+        {[...Array(rateToUse)].map((value ,i) => (
+          <FontAwesomeIcon key={i} icon={faStar} style={{ color: "#FF6060" }} />
         ))}
-        {[...Array(5  - rateToUse)].map(() => (
-          <FontAwesomeIcon icon={faStar} style={{ color: "#E3E3E3" }} />
+        {[...Array(5  - rateToUse)].map((value ,i) => (
+          <FontAwesomeIcon key={i} icon={faStar} style={{ color: "#E3E3E3" }} />
         ))}
       </div>
     );

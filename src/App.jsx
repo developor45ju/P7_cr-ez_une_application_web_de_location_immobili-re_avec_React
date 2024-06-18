@@ -8,11 +8,11 @@ import Footer from './components/Footer';
 
 const navItems = [
     {
-    name: 'Home',
+    name: 'Accueil',
     path: '/'
 }, 
     {
-    name: 'About',
+    name: 'A propos',
     path: '/about'
 }];
 const logoSite = process.env.PUBLIC_URL + '/images/logo.png';

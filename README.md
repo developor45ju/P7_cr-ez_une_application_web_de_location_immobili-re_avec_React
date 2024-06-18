@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Projet 7 Kasa - OpenClassrooms
+![](https://user.oc-static.com/upload/2022/06/24/16560899769906_FR_811_P8_Banner-Kasa%20%281%29.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sommaire
+1. Préanbule
+2. Installation
+3. Fonctionnalités
+    * Affichage des loggements
+    * Détails d'un logement
+    * Système de Gallery
+    * Système de Collapse
+    * Système de notation
+4. Technos utilisés
+5. Difficultés rencontré
+6. Conclusion
 
-## Available Scripts
+## Préambule
+Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant. Avec plus de 500 annonces postées chaque jour, Kasa fait partie des leaders de la location d’appartements entre particuliers en France.
 
-In the project directory, you can run:
+L'agence, **Kasa**, souhaitant moderniser son application web, m'a recruté en tant que *freelance* pour refaire intégralement l'application web avec une **techno** plus récente.
 
-### `npm start`
+## Instalation
+**Prérequis :**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Node.js 20+
+* npm ou yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+**Instruction :**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```shell
+cd path/to/directory
+git clone git@githubcom:developor45ju/P7_creez_une_application_web_de_location_immobiliere_avec_React.git
+npm install
+npm start
+```
 
-### `npm run build`
+## Fonctionnalités
+### Affichage des logements
+La page d'accueil affiche une liste de logements sous forme de cartes. Chaque carte présente :
+* Une image du logement
+* Le titre du logement
+### Détails d'un logement
+La page de détail d'un logement présente les informations suivantes :
+* Un carroussel (Gallery)
+* Le titre du logement
+* Le nom et la photo de l'hôte
+* La localisation
+* Les tags associés à ce logement
+* Le note moyenne du logement
+* Deux sections extensibles (Collapse) :
+    * Description du logement
+    * Equipement du logement
+### Système de Gallery
+Le carrousel d'images permet de visualiser les photos du logement :
+* Flèches de navigation (gauche/droite)
+* Affichage du numéro de l'image actuelle
+### Système de Collapse
+Les sections extensibles (Collapse) permettent d'afficher/masquer du contenu :
+* Un titre cliquable avec une flèche
+* Un paragraphe pour le *Collapse* description et une liste puce pour le *collapse* équipement
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technos utilisés
+### Front-end
+- React ^18.2.0
+- React Router ^6.22.3
+- SASS ^1.72.0
+- Autoprefixer ^10.4.19
+- Font Awesome 
+### Outils
+- Figma
+- Visual Studio Code
+- Git et GitHub
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Difficultés rencontrés
+- Mise en place du composant *Gallery*
+- Implémentation du responsive
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion 
+C'était un projet qui me faisait manipuler un Framework **JS** où je peux réutiliser des bouts de code, par exemple : le système de Gallery; le système de Collapse

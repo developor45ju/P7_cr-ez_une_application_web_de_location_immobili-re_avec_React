@@ -1,9 +1,9 @@
-.thumbail {
+.thumbnail {
     background-color: $primary;
     margin-top: 35px;
     margin-bottom: 25px;
 
-    .wrap-thumbail {
+    .wrap-thumbnail {
         position: relative;
         width: 1250px;
         margin: auto;
@@ -42,5 +42,45 @@
             border-radius: inherit;
         }
     }
+}
 
+@media screen and (max-width: 769px) {
+    .thumbnail {
+        .wrap-thumbnail {
+            width: 95%;
+            height: 175px;
+
+            img {
+                width: 100%;
+            }
+
+            h2 {
+                font-size: 40px;
+                width: 95%;
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 426px){
+    .thumbnail {
+        margin-top: 0;
+        margin-bottom: 15px;
+        .wrap-thumbnail {
+            width: 95%;
+            height: 150px;
+            margin: 0;
+
+            img {
+                width: 100%;
+            }
+
+            h2 {
+                text-align: start;
+                font-size: 25px;
+                width: 228px;
+            }
+        }
+    }
 }

@@ -1,17 +1,19 @@
+@import './base/_pages.scss';
 @import './base/_reset.scss';
 @import './base/_typographie.scss';
 
 @import './utils/_variables.scss';
 
+@import './layouts/_flex.scss';
+@import './layouts/_grid.scss';
+
 @import './components/_collapse.scss';
 @import './components/_card.scss';
 @import './components/_gallery.scss';
-@import './components/_thumbail.scss';
+@import './components/_thumbnail.scss';
 @import './components/_header.scss';    
 @import './components/_footer.scss';    
 
-@import './layouts/_flex.scss';
-@import './layouts/_grid.scss';
 
 @import './pages/_home.scss';
 @import './pages/_accommodation.scss';

@@ -6,9 +6,6 @@ header {
         margin-right: auto;
         margin-left: auto;
         width: 1240px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
         nav ul {
             display: flex;
@@ -22,6 +19,41 @@ header {
 
             li a.active {
                 border-bottom: 2px solid red;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 769px){
+    header {
+        .header__wrap {
+            width: 95%;
+            nav ul {
+                li a {
+                    font-size: 18px;
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 426px){
+    header {
+        .header__wrap {
+            margin: 15px 0;
+            img {
+                width: 145px;
+            }
+            nav ul {
+                li {
+                    width: max-content;
+                    a {
+                        font-size: 12px;
+                        margin: 0 5px;
+                        text-transform: uppercase;
+                    }
+                }
             }
         }
     }
