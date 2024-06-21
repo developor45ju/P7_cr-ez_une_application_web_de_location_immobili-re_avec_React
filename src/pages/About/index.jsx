@@ -5,7 +5,7 @@ function About() {
         <main>
             <div className="thumbnail">
                 <div className="wrap-thumbnail">
-                    <img src="./images/thumbnailA.jpg" alt="Vignette montagne" />
+                    <img src={process.env.PUBLIC_URL + "/images/thumbnailA.jpg"} alt="Vignette montagne" />
                 </div>
             </div>
             <section className="about">

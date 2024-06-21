@@ -12,7 +12,7 @@ function Accommodation() {
   useEffect(() => {
     const fetchArticle = async () => {
       const res = await fetch(
-        "http://localhost:3000/datas/accommodations.json"
+        `${process.env.PUBLIC_URL}/datas/accommodations.json`
       );
       const accommodationFromApi = await res.json();
       setAccommodation(accommodationFromApi);

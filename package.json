@@ -1,4 +1,5 @@
 {
+  "homepage": "https://developor45ju.github.io/P7_creez_une_application_web_de_location_immobiliere_avec_React",
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +24,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/style.scss ./public/css/style.css --style=compressed",
-    "prefixer": "postcss --use autoprefixer --dir ./public/css ./public/css/*.css"
+    "prefixer": "postcss --use autoprefixer --dir ./public/css ./public/css/*.css",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -48,6 +50,7 @@
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
+    "gh-pages": "^6.1.1",
     "globals": "^15.2.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",

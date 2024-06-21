@@ -5,7 +5,9 @@ function Home() {
     const [accommodations, setAccommodations] = useState([]);
     useEffect(() => {
         const fetchArticles = async () => {
-            const res = await fetch('http://localhost:3000/datas/accommodations.json');
+            const res = await fetch(
+                `${process.env.PUBLIC_URL}/datas/accommodations.json`
+            );
             const accommodationsFromApi = await res.json();
             setAccommodations(accommodationsFromApi);
         }
@@ -16,7 +18,7 @@ function Home() {
         <main>
             <div className="thumbnail">
                 <div className="wrap-thumbnail">
-                    <img src="./images/thumbnailH.jpg" alt="Vignette côte mer" />
+                    <img src={process.env.PUBLIC_URL + "/images/thumbnailH.jpg"} alt="Vignette côte mer" />
                     <h2>Chez vous, partout et ailleurs</h2>
                 </div>
             </div>

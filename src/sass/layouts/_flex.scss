@@ -1,4 +1,6 @@
 header {
+    display: flex;
+    justify-content: center;
     .header__wrap {
         display: flex;
         justify-content: space-between;
@@ -13,6 +15,12 @@ header {
 .thumbnail {
     display: flex;
     justify-content: center;
+
+    .wrap-thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .accommodation__host {

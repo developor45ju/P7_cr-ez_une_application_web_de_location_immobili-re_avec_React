@@ -3,13 +3,9 @@ header {
 
     .header__wrap {
         margin-top: 35px;
-        margin-right: auto;
-        margin-left: auto;
         width: 1240px;
 
         nav ul {
-            display: flex;
-
             li a {
                 text-decoration: none;
                 font-size: 24px;
@@ -52,6 +48,10 @@ header {
                         font-size: 12px;
                         margin: 0 5px;
                         text-transform: uppercase;
+
+                        &.active {
+                            border-bottom: 1px solid red;
+                        }
                     }
                 }
             }
