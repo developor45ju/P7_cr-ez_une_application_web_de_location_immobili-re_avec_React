@@ -34,6 +34,17 @@ header {
     align-items: center;
 }
 
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.accommodation {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .accommodation__host {
     display: flex;
     justify-content: flex-end;
@@ -55,6 +66,12 @@ header {
     justify-content: flex-end;
 }
 
+.collapse {
+    display: flex;
+    justify-content: center;
+
+}
+
 .collapse__wrap {
     display: flex;
     justify-content: space-between;
@@ -64,6 +81,11 @@ header {
         justify-content: space-between;
         align-items: center;
     }
+}
+
+.about {
+    display: flex;
+    justify-content: center;
 }
 
 .wrap-about .collapse__item-header {
