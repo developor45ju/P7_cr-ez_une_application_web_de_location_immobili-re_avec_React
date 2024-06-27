@@ -1,5 +1,5 @@
 {
-  "homepage": "/P7_creez_une_application_web_de_location_immobiliere_avec_React",
+  "homepage": "/kas-oc-p7",
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
@@ -10,12 +10,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
-    "styled-components": "^6.1.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
