@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/kasa-oc-p7/static/js/main.e2e1d521.js",
+    "main.js": "/kasa-oc-p7/static/js/main.23691aa5.js",
     "index.html": "/kasa-oc-p7/index.html",
-    "main.e2e1d521.js.map": "/kasa-oc-p7/static/js/main.e2e1d521.js.map"
+    "main.23691aa5.js.map": "/kasa-oc-p7/static/js/main.23691aa5.js.map"
   },
   "entrypoints": [
-    "static/js/main.e2e1d521.js"
+    "static/js/main.23691aa5.js"
   ]
 }
