@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/kas-oc-p7/static/js/main.bcd72425.js",
+    "index.html": "/kas-oc-p7/index.html",
+    "main.bcd72425.js.map": "/kas-oc-p7/static/js/main.bcd72425.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bcd72425.js"
+  ]
+}
