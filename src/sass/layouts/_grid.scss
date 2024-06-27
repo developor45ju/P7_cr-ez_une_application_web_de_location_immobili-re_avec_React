@@ -1,6 +1,7 @@
 .wrap-card {
     display: grid;
     grid-template-columns: repeat(3, max-content);
+    justify-content: center;
 }
 
 .accommodation__wrap {

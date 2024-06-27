@@ -23,6 +23,17 @@ header {
     }
 }
 
+.gallery-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__wrap {
+    display: flex;
+    align-items: center;
+}
+
 .accommodation__host {
     display: flex;
     justify-content: flex-end;
@@ -79,9 +90,7 @@ header {
         justify-content: center;
         .wrap-card {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            flex-wrap: wrap;
         }
     }
 

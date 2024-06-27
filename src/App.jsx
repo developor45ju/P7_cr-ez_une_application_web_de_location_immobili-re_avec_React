@@ -20,7 +20,7 @@ const nameSite = 'Kasa';
 
 const App = () => {
     return (
-        <Router basename='/P7_creez_une_application_web_de_location_immobiliere_avec_React'>
+        <Router basename={process.env.PUBLIC_URL}>
             <Header nav={navItems} logo={logoSite} />
             <Routes>
                 <Route path='/' element={<Home />} />
