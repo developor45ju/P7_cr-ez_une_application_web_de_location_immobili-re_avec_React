@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Gallery from "../../components/Gallery";
 import Rating from "../../components/Rating";
 import Tag from "../../components/Tags";
 import Collapse from "../../components/Collapse";
 
 function Accommodation() {
-  const { id } = useParams();
+  const pararams = useParams();
+  const navigate = useNavigate();
   const [accommodation, setAccommodation] = useState([]);
 
   useEffect(() => {
@@ -21,8 +22,12 @@ function Accommodation() {
   }, []);
 
   const currentAccommodation = accommodation.find(
-    (accommodation) => accommodation.id === id
+    (accommodation) => accommodation.id === pararams.id
   );
+
+  if (!currentAccommodation) {
+    return navigate("/404");
+  }
 
   const fname = currentAccommodation?.host.name.split(" ")[0];
   const lname = currentAccommodation?.host.name.split(" ")[1];
