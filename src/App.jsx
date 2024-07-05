@@ -20,7 +20,7 @@ const nameSite = 'Kasa';
 
 const App = () => {
     return (
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Header nav={navItems} logo={logoSite} />
             <Routes>
                 <Route path='/' element={<Home />} />
