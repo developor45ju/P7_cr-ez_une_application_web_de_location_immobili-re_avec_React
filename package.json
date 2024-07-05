@@ -1,5 +1,5 @@
 {
-  "homepage": "https://developor45ju.github.io/kasa-oc-p7",
+  "homepage": "https://developor45ju.github.io/kasa-oc-p7/",
   "name": "kasa",
   "version": "0.1.0",
   "private": true,
@@ -22,7 +22,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "sass --watch ./src/sass/style.scss ./public/css/style.css --style=compressed",
-    "prefixer": "postcss --use autoprefixer --dir ./public/css ./public/css/*.css"
+    "prefixer": "postcss --use autoprefixer --dir ./public/css ./public/css/*.css",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
