@@ -6,31 +6,41 @@ import Tag from "../../components/Tags";
 import Collapse from "../../components/Collapse";
 
 function Accommodation() {
-  const pararams = useParams();
+  const params = useParams();
   const navigate = useNavigate();
   const [accommodation, setAccommodation] = useState([]);
+  const [currentAccommodation, setCurrentAccommodation] = useState(null);
 
+  let firstname = "";
+  let lastname = "";
+
+  const fetchArticle = async () => {
+    const res = await fetch(
+      `${process.env.PUBLIC_URL}/datas/accommodations.json`
+    );
+    const accommodationFromApi = await res.json();
+    setAccommodation(accommodationFromApi);
+  };
+  
   useEffect(() => {
-    const fetchArticle = async () => {
-      const res = await fetch(
-        `${process.env.PUBLIC_URL}/datas/accommodations.json`
-      );
-      const accommodationFromApi = await res.json();
-      setAccommodation(accommodationFromApi);
-    };
-    fetchArticle();
+    fetchArticle();    
   }, []);
+  
+  useEffect(() => {
+    if (accommodation.length > 0) {
+      const foundAccommodation = accommodation.find(
+        (accommodation) => accommodation.id === params.id
+      );
+      if (!foundAccommodation) {
+        navigate("/404");
+      } else {
+        setCurrentAccommodation(foundAccommodation);
+      }
+    }
+  }, [accommodation, params, navigate])
 
-  const currentAccommodation = accommodation.find(
-    (accommodation) => accommodation.id === pararams.id
-  );
-
-  if (!currentAccommodation) {
-    return navigate("/404");
-  }
-
-  const fname = currentAccommodation?.host.name.split(" ")[0];
-  const lname = currentAccommodation?.host.name.split(" ")[1];
+  firstname = currentAccommodation?.host.name.split(" ")[0];
+  lastname = currentAccommodation?.host.name.split(" ")[1];
 
   return (
     <main>
@@ -40,7 +50,7 @@ function Accommodation() {
             <Gallery galleryImages={currentAccommodation.pictures} />
           </div>
           <article className="accommodation">
-            <div className="accommodation__wrap">
+            <div className="accommodation__wrap"> 
               <div className="accommodation__about">
                 <h1>{currentAccommodation.title}</h1>
                 <p>{currentAccommodation.location}</p>
@@ -48,8 +58,8 @@ function Accommodation() {
               <Tag tags={currentAccommodation.tags} />
               <div className="accommodation__host">
                 <div className="full-name">
-                  <p>{fname}</p>
-                  <p>{lname}</p>
+                  <p>{firstname}</p>
+                  <p>{lastname}</p>
                 </div>
                 <img
                   src={currentAccommodation.host.picture}

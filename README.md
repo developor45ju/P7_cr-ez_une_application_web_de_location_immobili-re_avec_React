@@ -62,11 +62,11 @@ Les sections extensibles (Collapse) permettent d'afficher/masquer du contenu :
 
 ## Technos utilisés
 ### Front-end
-- React ^18.2.0
-- React Router ^6.22.3
-- SASS ^1.72.0
-- Autoprefixer ^10.4.19
-- Font Awesome 
+- React 18.2.0
+- React Router 6.22.3
+- SASS 1.72.0
+- Autoprefixer 10.4.19
+- Font Awesome 6.5.1
 ### Outils
 - Figma
 - Visual Studio Code

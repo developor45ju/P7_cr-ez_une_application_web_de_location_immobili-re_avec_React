@@ -10,8 +10,9 @@
     .collapse__item {
         width: 100%;
         margin-bottom: 20px;
-
+        
         &-header {
+            cursor: pointer;
             color: $primary;
             background-color: $secondary;
             border-radius: 10px;
@@ -40,12 +41,13 @@
     max-width: 1240px;
     width: 95%;
     gap: 100px;
-
+    
     .collapse__item {
         width: 100%;
         margin-bottom: 20px;
 
         &-header {
+            cursor: pointer;
             color: $primary;
             background-color: $secondary;
             border-radius: 10px;

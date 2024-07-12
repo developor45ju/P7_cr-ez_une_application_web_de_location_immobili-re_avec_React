@@ -23,6 +23,12 @@ header {
     }
 }
 
+.wrap-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .gallery-cards {
     display: flex;
     justify-content: center;
