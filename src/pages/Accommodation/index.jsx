@@ -37,7 +37,7 @@ function Accommodation() {
         setCurrentAccommodation(foundAccommodation);
       }
     }
-  }, [accommodation, params, navigate])
+  }, [accommodation, params.id, navigate])
 
   firstname = currentAccommodation?.host.name.split(" ")[0];
   lastname = currentAccommodation?.host.name.split(" ")[1];
