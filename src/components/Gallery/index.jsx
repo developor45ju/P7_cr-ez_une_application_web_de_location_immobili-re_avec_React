@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 function Gallery({ galleryImages }) {
     const [current, setCurrent] = useState(0);
@@ -28,8 +26,8 @@ function Gallery({ galleryImages }) {
                     <img src={slide} alt="logement" key={index} className={`gallery__slide ${index === current ? 'active' : ''}`}  />
                 ))}
             </div>
-            <FontAwesomeIcon icon={faAngleLeft} onClick={prevSlide} id="arrowLeft" />
-            <FontAwesomeIcon icon={faAngleRight} onClick={nextSlide} id="arrowRight" />
+            <img src={process.env.PUBLIC_URL + "/images/arrowLeft.png"} alt="Flèche gauche" onClick={prevSlide} id="arrowLeft" />
+            <img src={process.env.PUBLIC_URL + "/images/arrowRight.png"} alt="Flèche droite" onClick={nextSlide} id="arrowRight" />
             <span className="number-image-current">{current + 1}/{galleryImages.length}</span>
         </div>
     )

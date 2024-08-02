@@ -1,6 +1,3 @@
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 function Rating({ rate }) {
   /**
    * Si le rate est noté entre 0 et 5 étoiles, alors on affiche le nombre correspondant
@@ -14,11 +11,11 @@ function Rating({ rate }) {
     const rateToUse = Number(rate);
     return (
       <div className="rating">
-        {[...Array(rateToUse)].map((value ,i) => (
-          <FontAwesomeIcon key={i} icon={faStar} style={{ color: "#FF6060" }} />
+        {[...Array(rateToUse)].map((_ ,i) => (
+          <img src={process.env.PUBLIC_URL + "/images/starFill.png"} key={i} alt="étoile rempli" />
         ))}
-        {[...Array(5  - rateToUse)].map((value ,i) => (
-          <FontAwesomeIcon key={i} icon={faStar} style={{ color: "#E3E3E3" }} />
+        {[...Array(5  - rateToUse)].map((_ ,i) => (
+          <img src={process.env.PUBLIC_URL + "/images/star.png"} key={i} alt="étoile vide" />
         ))}
       </div>
     );
